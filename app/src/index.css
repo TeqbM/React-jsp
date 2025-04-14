@@ -1,1 +1,14 @@
 @import "tailwindcss";
+
+body{
+     @apply text-lg;
+}
+.container{
+     @apply mx-auto px-5;
+}
+nav ul {
+     @apply flex items-center;
+}
+nav ul li a{
+     @apply inline-block p-3 ms-5 transition-all hover:text-amber-600;
+}
