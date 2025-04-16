@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 body{
-     @apply text-lg;
+     @apply text-lg leading-5;
 }
 .container{
      @apply mx-auto px-5;
@@ -11,4 +11,7 @@ nav ul {
 }
 nav ul li a{
      @apply inline-block p-3 ms-5 transition-all hover:text-amber-600;
+}
+.btn{
+     @apply cursor-pointer py-2 px-6 rounded-3xl bg-amber-600 text-white border border-amber-700 transition-all hover:bg-amber-700; 
 }

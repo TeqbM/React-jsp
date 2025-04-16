@@ -1,19 +1,33 @@
-import React, { useContext, useReducer } from 'react'
-import { AppContext } from '../Context/AppContext'
+import { useReducer } from "react"
 
-const inilState =1;
-const reducer = (state,action)=> {
-  if(action.type === "Increment"){
-    return state =state+1
+const initialState = [
+  {
+    id: new Date(),
+    name:"Mukesh",
+    email:"mukesh@gmail.com"
+  },
+  {
+    id: new Date(),
+    name:"Raghav",
+    email:"raghav@gmail.com"
+  }
+]
+
+const reducer =(state,action)=>{
+  switch (action.type) {
+    case "Increment":
+      return state =state+1;
+      break;
+    default:
+      break;
   }
 }
 export default function Blogs() {
-  const [state, dispatch] = useReducer(reducer, inilState);
+    const [state, dispatch] = useReducer(reducer,initialState);
     console.log(state);
   return (
-    <div>
-      {state}
-        <button onClick={()=> dispatch({type:"Increment"})}>inc</button>
-    </div>
+    <>
+        <button className="btn" onClick={()=> dispatch({type:'Increment'})}>Increment</button>
+    </>
   )
 }
