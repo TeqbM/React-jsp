@@ -1,33 +1,15 @@
-import { useReducer } from "react"
 
-const initialState = [
-  {
-    id: new Date(),
-    name:"Mukesh",
-    email:"mukesh@gmail.com"
-  },
-  {
-    id: new Date(),
-    name:"Raghav",
-    email:"raghav@gmail.com"
-  }
-]
 
-const reducer =(state,action)=>{
-  switch (action.type) {
-    case "Increment":
-      return state =state+1;
-      break;
-    default:
-      break;
-  }
-}
+
 export default function Blogs() {
-    const [state, dispatch] = useReducer(reducer,initialState);
-    console.log(state);
+  const api ="https://jsonplaceholder.typicode.com/posts"
+
   return (
     <>
-        <button className="btn" onClick={()=> dispatch({type:'Increment'})}>Increment</button>
+      <section className='py-5 mb-12'>
+        <div className="container ">
+        </div>
+      </section>
     </>
   )
 }

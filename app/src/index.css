@@ -15,3 +15,4 @@ nav ul li a{
 .btn{
      @apply cursor-pointer py-2 px-6 rounded-3xl bg-amber-600 text-white border border-amber-700 transition-all hover:bg-amber-700; 
 }
+
